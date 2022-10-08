@@ -82,7 +82,7 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData) {
-//        여기서 ModelAttribute를 생략할 수 있다.
+//        ModelAttribute를 이용해서 각각의 프로퍼티를 set해준다
         log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());
         return "ok";
     }
